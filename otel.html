@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Making Observability a Platform Invariant with OpenTelemetry</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Enrico A.</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/enrico-a-023182104/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+							<li><a href="https://github.com/enrico23" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">January 31, 2026</span>
+									<h1>Making Observability a Platform Invariant with OpenTelemetry</h1>
+								</header>
+								<p>
+								<h2>Making Observability a Platform Invariant with OpenTelemetry</h2>
+								<p><strong>Case Study — Platform Observability Strategy (.NET / Microservices)</strong></p>
+
+								<p>
+									In a previous role, I worked closely with the infrastructure team during the
+									introduction of OpenTelemetry across both a microservices landscape and a
+									large monolithic backend.
+								</p>
+
+								<p>
+									My focus was not on instrumentation alone, but on making observability
+									consistent, adoptable, and operationally durable at scale.
+								</p>
+
+								<div class="image main"><img src="images/otel.png" /></div>
+
+								<h3>Context</h3>
+								<ul>
+									<li>Mixed architecture: microservices alongside a large monolith.</li>
+									<li>Shared observability package introduced centrally.</li>
+									<li>Multiple product teams consuming the platform.</li>
+								</ul>
+
+								<p>
+									The technical challenge was instrumentation. The organisational challenge
+									was adoption and long-term consistency.
+								</p>
+
+								<h3>Core Lessons</h3>
+								<ul>
+									<li>Adoption is constrained more by cognitive load than tooling.</li>
+									<li>Telemetry must be visible and useful during development to be adopted.</li>
+									<li>Consistency matters more than configurability.</li>
+								</ul>
+
+								<h3>Platform-Level Decisions</h3>
+
+								<h4>1) Observability as a Default, Not an Option</h4>
+								<p>
+									Telemetry was centralised into a shared Service Defaults package.
+								</p>
+								<ul>
+									<li>Uniform logging, metrics, and tracing configuration.</li>
+									<li>Standard filtering and enrichment rules.</li>
+									<li>No per-service opt-in model.</li>
+								</ul>
+
+								<p>
+									If a service ran, it was observable. This removed variation and reduced
+									operational drift across teams.
+								</p>
+
+								<h4>2) Tracing With Intent</h4>
+								<ul>
+									<li>Focused on user-initiated flows, outbound dependencies, and data access.</li>
+									<li>Filtered low-value spans early (health checks, static assets, framework noise).</li>
+									<li>Preserved business correlation identifiers as explicit attributes.</li>
+								</ul>
+
+								<p>
+									The goal was signal clarity, not volume.
+								</p>
+
+								<h4>3) Correlation That Works</h4>
+								<ul>
+									<li>Technical correlation via W3C trace context.</li>
+									<li>Business correlation IDs generated at the edge and propagated downstream.</li>
+									<li>Enriched both logs and traces to support cross-team workflows.</li>
+								</ul>
+
+								<h4>4) Guardrails Validated Early</h4>
+								<ul>
+									<li>Sampling strategy aligned to environment boundaries.</li>
+									<li>Consistent resource attributes (service name, version, environment).</li>
+									<li>Dependency visibility as a non-negotiable baseline.</li>
+									<li>Export configuration treated as a deployment concern, not a code concern.</li>
+								</ul>
+
+								<h3>Impact</h3>
+								<ul>
+									<li>Lowered adoption friction for product teams.</li>
+									<li>Improved cross-team debugging through predictable telemetry shape.</li>
+									<li>Reduced configuration drift across services.</li>
+									<li>Enabled consistent triage workflows for incidents.</li>
+								</ul>
+
+								<h3>Application in Current Work</h3>
+								<p>
+									I am applying the same principles in a .NET Aspire–based microservices demo
+									as an independent design exercise, validating observability patterns in a
+									controlled environment.
+								</p>
+
+								<h3>Why This Matters</h3>
+								<p>
+									Observability becomes strategically valuable when it is consistent,
+									predictable, and automatic. When embedded as a platform invariant,
+									it reduces coordination cost and preserves debuggability as systems evolve.
+								</p>
+
+								<hr />
+								<p>
+								Originally published in narrative form on 
+								<a href="https://www.linkedin.com/posts/activity-7423305714158325760-t2Dn?utm_source=share&utm_medium=member_desktop&rcm=ACoAABpdoZsBjqs4p_GSoL4X5-ZQ1s9Ffq2xQzs" target="_blank" rel="noopener noreferrer">
+									LinkedIn
+								</a>.
+								</p>
+							</section>
+
+					</div>
+
+			<!-- Footer -->
+					<footer id="footer">
+						<section>
+						</section>
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">enrico2371@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/enrico-a-023182104/" class="icon brands alt fa-linkedin"><span class="label">Twitter</span></a></li>
+									<!-- <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
+									<li><a href="https://github.com/enrico23" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Enrico A.</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
