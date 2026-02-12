@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>From Ephemeral Metrics to Durable Signals</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Enrico A.</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/enrico-a-023182104/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+							<li><a href="https://github.com/enrico23" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">February 4, 2026</span>
+									<h1>From Ephemeral Metrics to Durable Signals</h1>
+								</header>
+								<p><strong>Case Study — Delivery Intelligence (CI/CD)</strong></p>
+								<p>
+									In a previous role, our CI/CD metrics were effective at answering immediate
+									operational questions (“what just broke?”), but insufficient for answering
+									long-horizon ones:
+								</p>
+
+								<ul>
+									<li>Were pipelines getting faster or slower over time?</li>
+									<li>Were changes improving delivery, or shifting bottlenecks?</li>
+									<li>Was additional test coverage still generating proportional confidence?</li>
+								</ul>
+
+								<div class="image main"><img src="images/pipeline-observability.jpg" alt="" /></div>
+
+								<h3>Context</h3>
+								<ul>
+									<li>Multi-team environment with high deployment frequency.</li>
+									<li>CI/CD telemetry retained for short windows and optimised for real-time dashboards.</li>
+									<li>Delivery conversations frequently reset once historical context expired.</li>
+								</ul>
+
+								<p>
+									The system was optimised for reacting to incidents, not for understanding delivery
+									climate over months.
+								</p>
+
+								<h3>Problem Reframing</h3>
+								<p>
+									The issue was not a lack of dashboards. It was treating delivery metrics as
+									short-lived telemetry rather than durable data.
+								</p>
+
+								<p>
+									Without historical continuity, long-term delivery decisions were being made
+									from short-term signals.
+								</p>
+
+								<h3>Ownership</h3>
+								<ul>
+									<li>Reframed CI/CD metrics as decision-support data rather than incident-support telemetry.</li>
+									<li>Defined which signals were worth persisting beyond default retention windows.</li>
+									<li>Established a long-term storage and aggregation approach to enable trend analysis.</li>
+								</ul>
+
+								<h3>Implementation Approach</h3>
+								<ul>
+									<li>Persisted key delivery metrics (pipeline duration, test phase duration, failure rates, deployment frequency).</li>
+									<li>Normalised metrics to allow cross-team comparison over time.</li>
+									<li>Focused on monthly and quarterly trend analysis rather than real-time dashboards.</li>
+								</ul>
+
+								<p>
+									The goal was not more visualisation. It was stable context.
+								</p>
+
+								<h3>Tradeoffs</h3>
+								<ul>
+									<li>Additional upfront effort to define metric semantics clearly.</li>
+									<li>Acceptance that durable analysis would not be instant.</li>
+									<li>Operational ownership of metric integrity over time.</li>
+								</ul>
+
+								<h3>Insights That Emerged</h3>
+								<p>
+									With durable history, patterns became visible that short retention windows
+									had masked.
+								</p>
+
+								<ul>
+									<li>Integration test coverage growth correlated with increasing build times.</li>
+									<li>Time-to-production slowed as full test suites expanded.</li>
+									<li>Failure rate improvements did not scale proportionally with execution cost.</li>
+								</ul>
+
+								<p>
+									This was not evidence that testing was harmful. It was evidence of diminishing
+									marginal confidence from blanket execution strategies.
+								</p>
+
+								<h3>Impact</h3>
+								<ul>
+									<li>Enabled evidence-based discussion about selective test execution strategies.</li>
+									<li>Made throughput vs confidence tradeoffs explicit.</li>
+									<li>Shifted delivery conversations from intuition-driven to data-grounded.</li>
+									<li>Provided longitudinal visibility that influenced ongoing optimisation decisions.</li>
+								</ul>
+
+								<h3>Why It Matters</h3>
+								<p>
+									Short-term metrics help teams react. <br />
+									Durable metrics help organisations decide.
+								</p>
+
+								<p>
+									By treating CI/CD data as durable infrastructure rather than disposable telemetry,
+									we improved the quality of delivery decisions and reduced reliance on anecdotal reasoning.
+								</p>
+
+								<hr />
+								<p>
+								Originally published in narrative form on 
+								<a href="https://www.linkedin.com/posts/activity-7426951166074286080-rUhR?utm_source=share&utm_medium=member_desktop&rcm=ACoAABpdoZsBjqs4p_GSoL4X5-ZQ1s9Ffq2xQzs" target="_blank" rel="noopener noreferrer">
+									LinkedIn
+								</a>.
+								</p>
+							</section>
+
+					</div>
+
+			<!-- Footer -->
+					<footer id="footer">
+						<section>
+						</section>
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">enrico2371@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/enrico-a-023182104/" class="icon brands alt fa-linkedin"><span class="label">Twitter</span></a></li>
+									<!-- <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
+									<li><a href="https://github.com/enrico23" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Enrico A.</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
